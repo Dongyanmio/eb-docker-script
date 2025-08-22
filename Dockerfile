@@ -1,9 +1,5 @@
 FROM --platform=linux/amd64 mcr.microsoft.com/dotnet/sdk:8.0
 
-# 设置 Debian 国内镜像
-RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
-    sed -i 's/security.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
-
 # 安装图形化依赖和其他必要包
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
