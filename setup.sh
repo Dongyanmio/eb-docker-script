@@ -1,5 +1,5 @@
 #!/bin/bash
-version="v1.0.0"
+version="v1.0.1"
 
 eb_install_path="/opt/eb-docker"
 eb_main_path="/opt/eb-docker/main"
@@ -46,7 +46,7 @@ fi
 
 echo_cyan "
 +---------------------------------------------------
- | EasyBot Docker 安装脚本（$verison）
+ | EasyBot Docker 安装脚本（$version）
 
  - 作者: Metcord
  - 特别鸣谢: MCSManager 安装脚本, @zkhssb, @zzh4141
