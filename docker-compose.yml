@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  easybot:
+    image: eb-docker:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${EB_BRIDGE_PORT:-26990}:26990"
+      - "${EB_WEBUI_PORT:-5000}:5000"
+    restart: always
+  command: ["/opt/eb-docker/main/EasyBot"]
+    volumes:
+      - /opt/eb-docker:/opt/eb-docker
