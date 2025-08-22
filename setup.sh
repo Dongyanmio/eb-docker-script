@@ -1,8 +1,9 @@
 #!/bin/bash
+version="v1.0.0"
 
 eb_install_path="/opt/eb-docker"
-
 eb_main_path="/opt/eb-docker/main"
+
 eb_latest_version="1.4.0-f36ec"
 eb_main_package_name="easybot-linux-x64-$eb_latest_version.zip"
 eb_install_url="https://files.inectar.cn/d/ftp/easybot/1.4.0-f36ec/linux-x64/easybot-linux-x64-$eb_latest_version.zip"
@@ -45,7 +46,7 @@ fi
 
 echo_cyan "
 +---------------------------------------------------
- | EasyBot Docker 安装脚本
+ | EasyBot Docker 安装脚本（$verison）
 
  - 作者: Metcord
  - 特别鸣谢: MCSManager 安装脚本, @zkhssb, @zzh4141
@@ -92,9 +93,9 @@ else
 fi
 
 # 询问用户端口并修改 docker-compose.yml
-read -p "请输入桥接端口（默认26990）: " eb_bridge_port
+read -p "请输入 EasyBot 桥接端口（默认26990）: " eb_bridge_port
 eb_bridge_port=${eb_bridge_port:-26990}
-read -p "请输入WebUI端口（默认5000）: " eb_webui_port
+read -p "请输入 EasyBot WebUI 端口（默认5000）: " eb_webui_port
 eb_webui_port=${eb_webui_port:-5000}
 
 # 修改 docker-compose.yml 端口配置
