@@ -1,5 +1,5 @@
 #!/bin/bash
-version="v1.0.1"
+version="v1.0.2"
 
 eb_install_path="/opt/eb-docker"
 eb_main_path="/opt/eb-docker/main"
@@ -58,8 +58,8 @@ if [ ! -d "$eb_main_path" ]; then
     mkdir -p "$eb_main_path"
 fi
 
-curl -L -o "$eb_install_path/docker-compose.yml" "https://raw.githubusercontent.com/Dongyanmio/eb-docker-script/main/docker-compose.yml"
-curl -L -o "$eb_install_path/Dockerfile" "https://raw.githubusercontent.com/Dongyanmio/eb-docker-script/main/Dockerfile"
+curl -L -o "$eb_install_path/docker-compose.yml" "https://gcore.jsdelivr.net/gh/Dongyanmio/eb-docker-script/docker-compose.yml"
+curl -L -o "$eb_install_path/Dockerfile" "https://gcore.jsdelivr.net/gh/Dongyanmio/eb-docker-script/Dockerfile"
 
 Install_Docker() {
     echo_yellow "温馨提醒: 建议使用 清华源 安装 Docker CE，Docker Registry 建议使用 1Panel 镜像仓库"
